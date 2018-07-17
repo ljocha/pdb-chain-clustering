@@ -239,7 +239,38 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta er
 % Use "Eq" instead of "Equation" for equation citations.
 \section*{Introduction}
 
+The problem
+\begin{itemize}
+\item large number of PDB structures
+\item many new ones coming in
+\item need for fast search of similarities (multiple approaches exist)
+\item targeting comparison of chain complexes
+\end{itemize}
+
 \section*{Materials and methods}
+
+\subsection*{Protein data bank}
+PDB database, clean subset for testing, further purged ($\alpha$ carbons only, \dots)
+
+\subsection*{Q-score}
+How is computed, properties (e.g. almost triangular inequality), $>0.5$ can be considered similar, distribution of pairwise values
+
+\subsection*{RCC}
+
+\subsection*{Method overview}
+
+Preparation
+\begin{itemize}
+\item find clusters, optimal number $\sqrt N$ (maybe multiplied with some factor, reduction of number comparison by the similarity search step)
+\item compute $n \times n$ q-scores within each cluster
+\end{itemize}
+
+Search
+\begin{itemize}
+\item find the best matching cluster
+\item similarity/dissimilarity search inside the cluster
+\end{itemize}
+
 
 % Place figure captions after the first paragraph in which they are cited.
 %\begin{figure}[!h]
@@ -248,8 +279,26 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta er
 %\label{fig1}
 %\end{figure}
 
+\subsection*{Clustering}
+
+why RCC
+
+dimensionality reduction
+
+what clustering techniques are applied 
+
+how cluster quality is evaluated, what is best clustering, optimization for $k$
+
+\subsection*{Similarity search}
+
+detailed description of the algorithm
+
+
 % Results and Discussion can be combined.
 \section*{Results}
+
+TODO: what to evaluate
+
 
 % Place tables after the first paragraph in which they are cited.
 %\begin{table}[!ht]
@@ -298,6 +347,8 @@ Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel
 \fi % template
 
 \section*{Discussion}
+
+why it works, with all details
 
 \section*{Conclusion}
 
